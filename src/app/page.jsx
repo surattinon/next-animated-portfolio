@@ -16,8 +16,8 @@ const Homepage = () => {
         <div className="h-1/2 lg:h-full lg:w-1/2 ">
           <motion.div
             className="flex items-center justify-center h-full"
-            initial={{ scale: 0.7, opacity: 0, filter: blur("20px") }}
-            animate={{ scale: 1, opacity: 1, filter: blur("0px") }}
+            initial={{ scale: 0.7, opacity: 0, filter: "blur(20px)" }}
+            animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 1 }}
           >
             <Image
@@ -32,8 +32,8 @@ const Homepage = () => {
         {/* TEXT CONTAINER */}
         <motion.div
           className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center md:items-start justify-center text-white"
-          initial={{ scale: 0.7, filter: blur("20px"), opacity: 0 }}
-          animate={{ scale: 1, filter: blur("0px"), opacity: 1 }}
+          initial={{ scale: 0.7, filter: "blur(20px)", opacity: 0 }}
+          animate={{ scale: 1, filter: "blur(0px)", opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
           <h1 className="text-4xl font-bold md:text-6xl">Surattinon Husen</h1>
