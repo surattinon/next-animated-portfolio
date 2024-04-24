@@ -86,10 +86,13 @@ const Homepage = () => {
           </div>
         </motion.div>
       </div>
-      <div className="h-[300vh] bg-black w-screen" ref={ref}>
+      <div
+        className="h-[300vh] bg-gradient-to-b from-[#000000] to-[#111111] w-screen"
+        ref={ref}
+      >
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div className="flex" style={{ x }}>
-            <div className="h-screen w-screen flex items-center justify-center bg-black">
+            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-t from-[#000000] to-[#111111]">
               <div className="h-screen w-full flex flex-col items-center justify-center">
                 <div className="h-60">
                   <div className="flex items-center justify-start">
@@ -107,7 +110,7 @@ const Homepage = () => {
             </div>
             {skills.map((item) => (
               <div
-                className="h-screen w-screen flex items-center justify-center bg-black"
+                className="h-screen w-screen flex items-center justify-center bg-gradient-to-t from-[#000000] to-[#111111]"
                 key={item.id}
               >
                 <div className="h-screen w-full flex flex-col items-center justify-center">
