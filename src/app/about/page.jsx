@@ -11,7 +11,7 @@ function AboutPage() {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div>AboutPage</div>
+      About Page
     </motion.div>
   );
 }

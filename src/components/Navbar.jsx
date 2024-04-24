@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import NavLink from "./navLink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const links = [
   { url: "/", title: "Home" },
@@ -100,7 +102,10 @@ function Navbar() {
       {/* SOCIALS */}
       <div className="hidden md:flex justify-end gap-4 w-1/3">
         <Link href="https://github.com/surattinon" target="_blank">
-          <Image src="/github.png" alt="" width={24} height={24} />
+          <FontAwesomeIcon
+            icon={faGithub}
+            style={{ width: "28px", height: "28px" }}
+          />
         </Link>
       </div>
       {/* RESPONSIVE MENU */}
