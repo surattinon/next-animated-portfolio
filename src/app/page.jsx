@@ -93,17 +93,15 @@ const Homepage = () => {
               <div className="h-screen w-full flex flex-col items-center justify-center">
                 <div className="h-60">
                   <div className="flex items-center justify-start">
+                    <div className="fixed w-[30px] h-[30px] bg-white blur-xl" />
                     <div className="fixed w-[30px] h-[30px] rounded-full bg-white m-auto" />
                     <div className="fixed w-[50vw] h-[5px] bg-white translate-x-4" />
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-8 mt-20">
-                  <h1 className="fixed text-8xl h-1/2 justify-start font-bold">
+                  <h1 className="fixed text-8xl h-1/2 justify-start font-bold pt-20">
                     Skills
                   </h1>
-                  <p className="fixed w-screen px-8 pb-32">
-                    Lorem ipsum dolor sit amet, qui minim labore adipisicing
-                  </p>
                 </div>
               </div>
             </div>
@@ -115,6 +113,7 @@ const Homepage = () => {
                 <div className="h-screen w-full flex flex-col items-center justify-center">
                   <div className="h-60">
                     <div className="flex items-center justify-center">
+                      <div className="fixed w-[30px] h-[30px] bg-white blur-xl" />
                       <div className="fixed w-[30px] h-[30px] rounded-full bg-white m-auto" />
                       <div className="fixed w-screen h-[5px] bg-white translate-x-4" />
                     </div>
