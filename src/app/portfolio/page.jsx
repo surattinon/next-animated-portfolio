@@ -11,7 +11,9 @@ function PortfolioPage() {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div>Portfolio Page</div>
+      <div className="w-screen h-[calc(100vh-6rem)] flex flex-col items-center justify-center text-8xl">
+        My Works
+      </div>
     </motion.div>
   );
 }
