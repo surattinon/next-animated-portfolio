@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import NavLink from "./navLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -134,7 +133,7 @@ function Navbar() {
           </button>
           {/* MENU LIST */}
           {open && (
-            <div className="absolute z-40 top-0 left-0 w-screen h-screen flex flex-col items-center justify-center">
+            <div className="absolute z-40 top-0 left-0 w-screen h-screen flex flex-col items-center justify-center overflow-hidden">
               <motion.div
                 variants={listBG}
                 initial="closed"
