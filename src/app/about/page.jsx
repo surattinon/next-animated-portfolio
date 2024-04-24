@@ -11,7 +11,9 @@ function AboutPage() {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      About Page
+      <div className="w-screen h-[calc(100vh-6rem)] flex flex-col items-center justify-center text-8xl">
+        About Me
+      </div>
     </motion.div>
   );
 }
