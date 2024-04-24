@@ -80,88 +80,91 @@ function Navbar() {
   };
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
-      {/* LINK */}
-      <div className="hidden md:flex gap-4 w-1/3 text-white">
-        {links.map((link) => (
-          <NavLink link={link} key={link.title} />
-        ))}
-      </div>
-      {/* LOGO */}
-      <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
-        <Link
-          href="/"
-          className="text-sm bg-none font-semibold flex items-center justify-center"
-        >
-          <span className="text-white mr-3">info</span>
-          <span className="w-12 h-8 px-3 rounded bg-white text-black flex items-center justify-center">
-            .ofBas
-          </span>
-        </Link>
-      </div>
-      {/* SOCIALS */}
-      <div className="hidden md:flex justify-end gap-4 w-1/3">
-        <Link href="https://github.com/surattinon" target="_blank">
-          <FontAwesomeIcon
-            icon={faGithub}
-            style={{ width: "28px", height: "28px" }}
-          />
-        </Link>
-      </div>
-      {/* RESPONSIVE MENU */}
-      <div className="md:hidden">
-        <button
-          className="w-10 h-8 flex flex-col justify-between z-50 relative"
-          onClick={() => setOpen(!open)}
-        >
-          <motion.div
-            variants={topHam}
-            animate={open ? "open" : "closed"}
-            className="w-10 h-1 bg-white rounded origin-left"
-          ></motion.div>
-          <motion.div
-            variants={centerHam}
-            animate={open ? "open" : "closed"}
-            className="w-10 h-1 bg-white rounded"
-          ></motion.div>
-          <motion.div
-            variants={bottomHam}
-            animate={open ? "open" : "closed"}
-            className="w-10 h-1 bg-white rounded origin-left"
-          ></motion.div>
-        </button>
-        {/* MENU LIST */}
-        {open && (
-          <div className="absolute z-40 top-0 left-0 w-screen h-screen flex flex-col items-center justify-center">
+    <div className="fixed w-screen p-5 z-40 backdrop-blur-3xl drop-shadow-2xl border-b-[1px] border-[#444444]">
+      <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+        {/* LINK */}
+        <div className="hidden md:flex gap-4 w-1/3 text-white">
+          {links.map((link) => (
+            <NavLink link={link} key={link.title} />
+          ))}
+        </div>
+        {/* LOGO */}
+        <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
+          <Link
+            href="/"
+            className="text-sm bg-none font-semibold flex items-center justify-center hover:scale-110 transition-all duration-200"
+          >
+            <span className="text-white mr-3">info</span>
+            <span className="w-12 h-8 px-3 rounded bg-white text-black flex items-center justify-center">
+              .ofBas
+            </span>
+          </Link>
+        </div>
+        {/* SOCIALS */}
+        <div className="hidden md:flex justify-end gap-4 w-1/3">
+          <Link href="https://github.com/surattinon" target="_blank">
+            <FontAwesomeIcon
+              icon={faGithub}
+              style={{ width: "28px", height: "28px" }}
+              className="hover:scale-105 transition-all duration-200"
+            />
+          </Link>
+        </div>
+        {/* RESPONSIVE MENU */}
+        <div className="md:hidden">
+          <button
+            className="w-10 h-8 flex flex-col justify-between z-50 relative"
+            onClick={() => setOpen(!open)}
+          >
             <motion.div
-              variants={listBG}
-              initial="closed"
-              animate="open"
-              className="absolute z-40 top-0 left-0 w-full h-full bg-black/30 backdrop-blur-xl justify-center"
+              variants={topHam}
+              animate={open ? "open" : "closed"}
+              className="w-10 h-1 bg-white rounded origin-left"
             ></motion.div>
             <motion.div
-              className="absolute z-40 flex flex-col w-full h-full text-4xl items-center justify-center gap-16"
-              variants={navList}
-              initial="closed"
-              animate="open"
-            >
-              {links.map((link) => (
-                <motion.div
-                  className=""
-                  variants={listBlockVariants}
-                  key={link.title}
-                >
-                  <Link
-                    href={link.url}
-                    className="mr-3 bg-[#3c3c3c]/60 ring-1 ring-[#444444] backdrop-blur-3xl text-white px-5 py-3 rounded-xl"
+              variants={centerHam}
+              animate={open ? "open" : "closed"}
+              className="w-10 h-1 bg-white rounded"
+            ></motion.div>
+            <motion.div
+              variants={bottomHam}
+              animate={open ? "open" : "closed"}
+              className="w-10 h-1 bg-white rounded origin-left"
+            ></motion.div>
+          </button>
+          {/* MENU LIST */}
+          {open && (
+            <div className="absolute z-40 top-0 left-0 w-screen h-screen flex flex-col items-center justify-center">
+              <motion.div
+                variants={listBG}
+                initial="closed"
+                animate="open"
+                className="absolute z-40 top-0 left-0 w-full h-full bg-black/30 backdrop-blur-xl justify-center"
+              ></motion.div>
+              <motion.div
+                className="absolute z-40 flex flex-col w-full h-full text-4xl items-center justify-center gap-16"
+                variants={navList}
+                initial="closed"
+                animate="open"
+              >
+                {links.map((link) => (
+                  <motion.div
+                    className=""
+                    variants={listBlockVariants}
+                    key={link.title}
                   >
-                    {link.title}
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        )}
+                    <Link
+                      href={link.url}
+                      className="mr-3 bg-[#3c3c3c]/60 ring-1 ring-[#444444] backdrop-blur-3xl text-white px-5 py-3 rounded-xl"
+                    >
+                      {link.title}
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
